@@ -4,7 +4,7 @@ pipeline {
         stage('Init') {
             steps {
                 echo 'Hello World'
-                echo 'Hello Other World'
+                echo "Build {env.BUILD_ID}"
             }
         }
 
