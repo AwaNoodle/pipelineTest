@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Init') {
             steps {
-                echo 'Hello World for ${env.SOMETHING}'
+                echo "Hello World for ${env.SOMETHING}"
                 echo "Build ${env.BUILD_ID}"
             }
         }
@@ -19,7 +19,7 @@ pipeline {
             }
 
             steps {
-                echo 'Hello from Post-Init for ${env.SOMETHING}'
+                echo "Hello from Post-Init for ${env.SOMETHING}"
             }
         }
 
