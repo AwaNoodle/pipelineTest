@@ -37,7 +37,7 @@ pipeline {
         stage('Docker Test') {
             agent { docker 'openjdk:8-jre' } 
             steps {
-                echo "The approval notes were: ${Notes}"
+                echo "The approval notes were: ${env.Notes}"
                 echo 'Hello, JDK'
                 sh 'java -version'
             }
