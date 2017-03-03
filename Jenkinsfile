@@ -31,6 +31,7 @@ pipeline {
                             string(defaultValue: '', description: 'Add notes here', name: 'Notes')
                         ]
                 }
+                echo "You added notes of: ${env.Notes}"
             }
         }
 
