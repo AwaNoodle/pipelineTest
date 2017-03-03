@@ -41,6 +41,7 @@ pipeline {
                 echo "The approval notes were: ${env.Notes}"
                 echo 'Hello, JDK'
                 sh 'java -version'
+                sh 'printenv'
             }
         }
     }
