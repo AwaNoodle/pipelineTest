@@ -23,6 +23,10 @@ pipeline {
             }
         }
 
+        stage('Approve') {
+            input 'Move to Docker Test?'
+        }
+
         stage('Docker Test') {
             agent { docker 'openjdk:8-jre' } 
             steps {
