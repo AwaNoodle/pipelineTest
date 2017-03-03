@@ -31,14 +31,14 @@ pipeline {
                             string(defaultValue: '', description: 'Add notes here', name: 'Notes')
                         ]
                 }
-                echo "You added notes of: ${env.Notes}"
+                echo "You added notes of: ${params.Notes}"
             }
         }
 
         stage('Docker Test') {
             agent { docker 'openjdk:8-jre' } 
             steps {
-                echo "The approval notes were: ${env.Notes}"
+                echo "The approval notes were: ${params.Notes}"
                 echo 'Hello, JDK'
                 sh 'java -version'
                 sh 'printenv'
