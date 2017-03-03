@@ -25,10 +25,12 @@ pipeline {
 
         stage('Approve') {
             steps {
-                input message: 'Do you want to move to Docker build?', ok: 'Dockerize', 
-                    parameters: [
-                        string(defaultValue: '', description: 'Add notes here', name: 'Notes')
-                    ]
+                timeout(1) {
+                    input message: 'Do you want to move to Docker build?', ok: 'Dockerize', 
+                        parameters: [
+                            string(defaultValue: '', description: 'Add notes here', name: 'Notes')
+                        ]
+                }
             }
         }
 
