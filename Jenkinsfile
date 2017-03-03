@@ -24,7 +24,9 @@ pipeline {
         }
 
         stage('Approve') {
-            input 'Move to Docker Test?'
+            steps {
+                input 'Move to Docker Test?'
+            }
         }
 
         stage('Docker Test') {
